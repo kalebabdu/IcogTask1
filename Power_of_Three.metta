@@ -1,0 +1,11 @@
+(=(check_thirdroot $x)
+    (if (== $x 1)
+        (True)
+        (if(< $x 3)
+            (False)
+            (check_thirdroot (/ $x 3))
+        )
+    )
+)
+
+!(check_thirdroot 9)

@@ -1,0 +1,11 @@
+(=(check_fourthroot $x)
+    (if (== $x 1)
+        (True)
+        (if(< $x 4)
+            (False)
+            (check_fourthroot (/ $x 4))
+        )
+    )
+)
+
+!(check_fourthroot 64)
